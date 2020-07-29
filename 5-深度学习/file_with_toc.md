@@ -1,5 +1,6 @@
 <a name="index">**Index**</a>
-<a href="#0">前言</a>  
+
+<a href="#0">前言</a>
 <a href="#1">什么是深度学习</a>  
 <a href="#2">什么是神经网络</a>  
 <a href="#3">开启神经元</a>  
@@ -7,18 +8,31 @@
 &emsp;<a href="#5">单层神经网络-感知器</a>  
 &emsp;&emsp;<a href="#6">代码</a>  
 &emsp;<a href="#7">两层神经网络（多层感知器）</a>
+
 &emsp;&emsp;<a href="#8">训练</a>
+
 &emsp;&emsp;&emsp;<a href="#9">激活函数</a>
+
 &emsp;&emsp;&emsp;<a href="#10">损失</a>
+
 &emsp;&emsp;&emsp;<a href="#11">优化-梯度下降</a>
+
 &emsp;&emsp;&emsp;<a href="#12">反向传播</a>
+
 &emsp;&emsp;&emsp;<a href="#13">正则化</a>
+
 &emsp;&emsp;&emsp;<a href="#14">意义</a>
+
 &emsp;<a href="#15">多层神经网络（深度学习）</a>
+
 &emsp;&emsp;<a href="#16">训练</a>
-<a href="#17">神经网络发展史</a>
-<a href="#18">神经网络对比</a>
-<a href="#19">神经网络类别</a>
+
+&emsp;&emsp;&emsp;<a href="#17">神经网络发展史</a>
+
+&emsp;&emsp;&emsp;<a href="#18">神经网络对比</a>
+
+&emsp;&emsp;&emsp;<a href="#19">神经网络类别</a>
+
 
 # <a name="0">前言</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
