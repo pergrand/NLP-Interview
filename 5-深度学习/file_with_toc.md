@@ -2,37 +2,39 @@
 
 <a href="#0">前言</a>
 
-<a href="#1">什么是深度学习</a>  
-<a href="#2">什么是神经网络</a>  
-<a href="#3">开启神经元</a>  
-&emsp;<a href="#4">MP模型诞生</a>  
-&emsp;<a href="#5">单层神经网络-感知器</a>  
-&emsp;&emsp;<a href="#6">代码</a>  
-&emsp;<a href="#7">两层神经网络（多层感知器）</a>
+<a href="#1">1. 什么是深度学习</a>
+<a href="#2">2. 什么是神经网络</a>
+<a href="#3">3. 开启神经元</a>
+&emsp;<a href="#4">3.1 MP模型诞生</a>
+&emsp;<a href="#5">3.2 单层神经网络-感知器</a>
+&emsp;&emsp;<a href="#6">3.2.1 代码</a>
+&emsp;<a href="#7">3.3 两层神经网络（多层感知器）</a>
 
-&emsp;&emsp;<a href="#8">训练</a>
+&emsp;&emsp;<a href="#8">3.3.1 训练</a>
 
-&emsp;&emsp;&emsp;<a href="#9">激活函数</a>
+&emsp;&emsp;&emsp;<a href="#9">3.3.1.1 激活函数</a>
 
-&emsp;&emsp;&emsp;<a href="#10">损失</a>
+&emsp;&emsp;&emsp;<a href="#10">3.3.1.2 损失</a>
 
-&emsp;&emsp;&emsp;<a href="#11">优化-梯度下降</a>
+&emsp;&emsp;&emsp;<a href="#11">3.3.1.3 优化-梯度下降</a>
 
-&emsp;&emsp;&emsp;<a href="#12">反向传播</a>
+&emsp;&emsp;&emsp;<a href="#12">3.3.1.4 反向传播</a>
 
-&emsp;&emsp;&emsp;<a href="#13">正则化</a>
+&emsp;&emsp;&emsp;<a href="#13">3.3.1.5 正则化</a>
 
-&emsp;&emsp;&emsp;<a href="#14">意义</a>
+&emsp;&emsp;&emsp;<a href="#14">3.3.1.6 意义</a>
 
-&emsp;<a href="#15">多层神经网络（深度学习）</a>
+&emsp;<a href="#15">3.4 多层神经网络（深度学习）</a>
 
-&emsp;&emsp;<a href="#16">训练</a>
+&emsp;&emsp;<a href="#16">3.4.1 训练</a>
 
-&emsp;&emsp;&emsp;<a href="#17">神经网络发展史</a>
+<a href="#17">4. 神经网络发展史</a>
 
-&emsp;&emsp;&emsp;<a href="#18">神经网络对比</a>
+<a href="#18">5. 神经网络对比</a>
 
-&emsp;&emsp;&emsp;<a href="#19">神经网络类别</a>
+<a href="#19">6. 神经网络类别</a>
+
+<a href="#20">6. 结语</a>
 
 
 # <a name="0">前言</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
@@ -211,6 +213,7 @@ loss = (yp - y)2  　
 
 网络结构图看作是一个有向图。其中神经元代表顶点，连接代表有向边。对于前馈神经网络中，这个有向图是没有回路的。你可以仔细观察本文中出现的所有神经网络的结构图，确认一下。而对于反馈神经网络中，结构图的有向图是有回路的。反馈神经网络也是一类重要的神经网络。其中Hopfield网络就是反馈神经网络。深度学习中的RNN也属于一种反馈神经网络。
 
+# <a name="20">结语</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 **参考：**
 + [神经网络通俗易懂](<https://blog.csdn.net/illikang/article/details/82019945>)
