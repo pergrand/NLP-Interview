@@ -6,25 +6,23 @@
 &emsp;<a href="#4">MP模型诞生</a>  
 &emsp;<a href="#5">单层神经网络-感知器</a>  
 &emsp;&emsp;<a href="#6">代码</a>  
-<a href="#7">-*- coding: UTF-8 -*-</a>  
-<a href="#8">        print(O)</a>  
-<a href="#9">        print(Y)</a>  
-<a href="#10">x = [[0,0],[0,1],[1,0],[1,1]]</a>  
-<a href="#11">y = [0,1,1,0]</a>  
-&emsp;<a href="#12">两层神经网络（多层感知器）</a>  
-&emsp;&emsp;<a href="#13">训练</a>  
-&emsp;&emsp;&emsp;<a href="#14">激活函数</a>  
-&emsp;&emsp;&emsp;<a href="#15">损失</a>  
-&emsp;&emsp;&emsp;<a href="#16">优化-梯度下降</a>  
-&emsp;&emsp;&emsp;<a href="#17">反向传播</a>  
-&emsp;&emsp;&emsp;<a href="#18">正则化</a>  
-&emsp;&emsp;&emsp;<a href="#19">意义</a>  
-&emsp;<a href="#20">多层神经网络（深度学习）</a>  
-&emsp;&emsp;<a href="#21">训练</a>  
-<a href="#22">神经网络发展史</a>  
-<a href="#23">神经网络对比</a>  
-<a href="#24">神经网络类别</a>  
-
+<a href="#7">        print(O)</a>
+<a href="#8">        print(Y)</a>
+<a href="#9">x = [[0,0],[0,1],[1,0],[1,1]]</a>
+<a href="#10">y = [0,1,1,0]</a>
+&emsp;<a href="#11">两层神经网络（多层感知器）</a>
+&emsp;&emsp;<a href="#12">训练</a>
+&emsp;&emsp;&emsp;<a href="#13">激活函数</a>
+&emsp;&emsp;&emsp;<a href="#14">损失</a>
+&emsp;&emsp;&emsp;<a href="#15">优化-梯度下降</a>
+&emsp;&emsp;&emsp;<a href="#16">反向传播</a>
+&emsp;&emsp;&emsp;<a href="#17">正则化</a>
+&emsp;&emsp;&emsp;<a href="#18">意义</a>
+&emsp;<a href="#19">多层神经网络（深度学习）</a>
+&emsp;&emsp;<a href="#20">训练</a>
+<a href="#21">神经网络发展史</a>
+<a href="#22">神经网络对比</a>
+<a href="#23">神经网络类别</a>
 
 # <a name="0">前言</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
@@ -95,7 +93,7 @@ z是在输入a和权值w的线性加权sum和叠加了一个函数g的值。在M
 
 ### <a name="6">代码</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 ```
-# <a name="7">-*- coding: UTF-8 -*-</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+
 import numpy  as np
 import matplotlib  as mpl
 import matplotlib.pyplot as plt
@@ -134,8 +132,8 @@ if __name__ == '__main__':
         update()
 
         O=np.sign(np.dot(X,W.T))
-# <a name="8">        print(O)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
-# <a name="9">        print(Y)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+# <a name="7">        print(O)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+# <a name="8">        print(Y)</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
         if(O == Y).all():
             print('Finished')
             print('epoch:',n)
@@ -164,13 +162,13 @@ plt.show()
 
 例如：代码中输入和真实值改为下面，无法进行分类
 
-# <a name="10">x = [[0,0],[0,1],[1,0],[1,1]]</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+# <a name="9">x = [[0,0],[0,1],[1,0],[1,1]]</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
-# <a name="11">y = [0,1,1,0]</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+# <a name="10">y = [0,1,1,0]</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 ![异或逻辑](../img/深度学习/异或逻辑.png)
 
-## <a name="12">两层神经网络（多层感知器）</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+## <a name="11">两层神经网络（多层感知器）</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 Minsky说过单层神经网络无法解决异或问题。但是当增加一个计算层以后，两层神经网络不仅可以解决异或问题，而且具有非常好的非线性分类效果。不过两层神经网络的计算是一个问题，没有一个较好的解法。
 
@@ -182,15 +180,15 @@ Minsky说过单层神经网络无法解决异或问题。但是当增加一个�
 
 神经网络的本质就是通过参数与激活函数来拟合**特征与目标**之间的真实函数关系。与单层神经网络不同。理论证明，两层神经网络可以无限逼近任意连续函数。也就是说，面对复杂的非线性分类任务，两层（带一个隐藏层）神经网络可以分类的很好。
 
-### <a name="13">训练</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+### <a name="12">训练</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
-#### <a name="14">激活函数</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="13">激活函数</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 激活函数是用来加入**非线性因素**的，提高神经网络对模型的表达能力，解决线性模型所不能解决的问题。
 
 ![激活函数](../img/深度学习/激活函数的作用.png)
 
-#### <a name="15">损失</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="14">损失</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 机器学习模型训练的目的，就是使得参数尽可能的与真实的模型逼近。具体做法是这样的。首先给所有参数赋上随机值。我们使用这些随机生成的参数值，来预测训练数据中的样本。样本的预测目标为yp，真实目标为y。
 
 那么，定义一个值loss，计算公式如下。
@@ -199,7 +197,7 @@ loss = (yp - y)2  　
 
 这个值称之为**损失**（loss），我们的目标就是使对所有训练数据的损失和尽可能的小。可以把损失写为关于参数（parameter）的函数，这个函数称之为**损失函数**（loss function）。下面的问题就是求：如何优化参数，能够让**损失函数的值最小**。
 
-#### <a name="16">优化-梯度下降</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="15">优化-梯度下降</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 问题如何让损失最小：
 
@@ -209,19 +207,19 @@ loss = (yp - y)2  　
 
 在神经网络模型中，由于结构复杂，每次计算梯度的代价很大。因此还需要使用反向传播算法。
 
-#### <a name="17">反向传播</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="16">反向传播</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 反向传播算法的启示是数学中的**链式法则**。利用神经网络的结构进行的计算。不一次计算所有参数的梯度，而是从后往前,一层层反向传播。
 
 首先计算输出层的梯度，然后是第二个参数矩阵的梯度，接着是中间层的梯度，再然后是第一个参数矩阵的梯度，最后是输入层的梯度。计算结束以后，所要的两个参数矩阵的梯度就都有了。
 
-#### <a name="18">正则化</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="17">正则化</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 化问题只是训练中的一个部分。机器学习问题之所以称为学习问题，而不是优化问题，就是因为它不仅要求数据在训练集上求得一个较小的误差，在测试集上也要表现好。
 
 因为模型最终是要部署到没有见过训练数据的真实场景。提升模型在测试集上的预测效果的主题叫做**泛化**（generalization），相关方法被称作正则化（regularization）。神经网络中常用的泛化技术有**权重衰减**等。
 
-#### <a name="19">意义</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+#### <a name="18">意义</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 两层神经网络在多个地方的应用说明了其效用与价值。10年前困扰神经网络界的异或问题被轻松解决。
 
@@ -229,7 +227,7 @@ loss = (yp - y)2  　
 
 90年代中期，由Vapnik等人发明的SVM（Support Vector Machines，支持向量机）算法诞生，很快就在若干个方面体现出了对比神经网络的优势：无需调参；高效；全局最优解。基于以上种种理由，SVM迅速打败了神经网络算法成为主流。
 
-## <a name="20">多层神经网络（深度学习）</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+## <a name="19">多层神经网络（深度学习）</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 2006年，Hinton在《Science》和相关期刊上发表了论文，首次提出了“深度信念网络”的概念。与传统的训练方式不同，“深度信念网络”有一个“预训练”（pre-training）的过程，这可以方便的让神经网络中的权值找到一个接近最优解的值，之后再使用“微调”(fine-tuning)技术来对整个网络进行优化训练。
 
@@ -237,7 +235,7 @@ loss = (yp - y)2  　
 
 ![多层神经网络](../img/深度学习/多层神经网络.png)
 
-### <a name="21">训练</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+### <a name="20">训练</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 与两层层神经网络不同。多层神经网络中的层数增加了很多。增加更多的层次有什么好处？更深入的表示特征，以及更强的函数模拟能力。
 
@@ -249,15 +247,15 @@ loss = (yp - y)2  　
 
 在深度学习中，泛化技术变的比以往更加的重要。这主要是因为神经网络的层数增加了，参数也增加了，表示能力大幅度增强，很容易出现过拟合现象。因此正则化技术就显得十分重要。目前，Dropout技术，以及数据扩容（Data-Augmentation）技术是目前使用的最多的正则化技术。
 
-# <a name="22">神经网络发展史</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+# <a name="21">神经网络发展史</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 ![神经网络发展](../img/深度学习/神经网络发展.png)
 
-# <a name="23">神经网络对比</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+# <a name="22">神经网络对比</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 ![神经网络对比](../img/深度学习/神经网络对比.png)
 
-# <a name="24">神经网络类别</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
+# <a name="23">神经网络类别</a><a style="float:right;text-decoration:none;" href="#index">[Top]</a>
 
 ![神经网络类别](../img/深度学习/神经网络类别.png)
 
